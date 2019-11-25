@@ -1,1 +1,1 @@
-# JournalFrontEnd
+# Journal front end
