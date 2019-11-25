@@ -1,6 +1,7 @@
 body {
     background-color: lightgrey;
   }
+  
   h1 {
     color: black;
     font-family: Verdana;
@@ -17,7 +18,7 @@ body {
     border: 1px solid black;
     font-size: medium;
   }
-  
+
   table {
     border-collapse: collapse;
     width: 50%;
