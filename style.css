@@ -1,0 +1,12 @@
+body {
+    background-color: lightgrey;
+  }
+  h1 {
+    color: black;
+    font-family: Verdana;
+    margin: 50px;
+  }
+  p {
+    color: darkblue;
+    font-family: verdana;
+  }
