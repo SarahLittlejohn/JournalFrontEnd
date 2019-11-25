@@ -1,0 +1,29 @@
+body {
+    background-color: lightgrey;
+  }
+  
+  h1 {
+    color: black;
+    font-family: Verdana;
+    margin: 50px;
+  }
+
+  p {
+    color: black;
+    font-family: verdana;
+    font-size: small;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    font-size: medium;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 50%;
+  }
+  
+  th {
+    height: 30px;
+  }
