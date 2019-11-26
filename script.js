@@ -16,7 +16,7 @@ resources.onload = function() {
     createResource();
 
     // FUnction to delete a resource
-    deleteResource();
+    deleteResourceButton();
 }
 
 // Functions are defined here
@@ -31,6 +31,14 @@ function createResource() {
 }
 
 // Delete resource button
-function deleteResource() {
-    document.getElementById("delete").innerHTML = "Hello World";
-}
+function deleteResourceButton(buttonId, elementToRemoveId) {
+    buttonId.addEventListener('click', () => {
+      deleteResource(elementToRemoveId);
+    });
+  }
+
+  // Function for removing an element (via button)
+function deleteResource(elementId){
+    var element = document.getElementById(elementId);
+    element.parentNode.removeChild(element);
+  }
