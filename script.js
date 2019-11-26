@@ -1,13 +1,6 @@
 // Make http request for resources from database
-    // XMLHttpRequest
-        // let request = new XMLHttpRequest();
-        // request.open('GET', url);
-        // request.responseType = 'text';
+let resources = new XMLHttpRequest();
+resources.open('GET', localhost:5432/journal, false);
+resources.send();
+resources.responseType = 'text';
 
-
-
-// Display resources from database
-
-// Create resource button
-
-// Delete resource button
