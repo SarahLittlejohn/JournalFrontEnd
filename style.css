@@ -27,3 +27,7 @@ body {
   th {
     height: 30px;
   }
+
+  .button {
+    color: blue;
+  }
