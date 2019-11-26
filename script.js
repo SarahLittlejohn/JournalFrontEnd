@@ -4,12 +4,13 @@ resources.open('GET', localhost:5432/journal, false);
 resources.send();
 resources.responseType = 'text';
 
+// Functions e.g. remove, create,... that work when data is loaded
 resources.onload = function() {
-    // Contains functions e.g. remove, create,... that work when data is loaded.
+    
     var data = JSON.parse(this.response);
     
     // Function to display resources
-    display.resources(data);
+    displayResources(data);
 
     // Function to create a resource
     createResource();
@@ -19,6 +20,17 @@ resources.onload = function() {
 }
 
 // Functions are defined here
+// Display resources
+function displayResources(data) {
+
+}
+
 // Create resource button
+function createResource() {
+
+}
 
 // Delete resource button
+function deleteResource() {
+    document.getElementById("delete").innerHTML = "Hello World";
+}
