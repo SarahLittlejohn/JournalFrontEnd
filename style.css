@@ -1,43 +1,62 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 1rem;
+  border: 1px solid rgb(14, 14, 41);
+  border-radius: 10px;
+}
+
 body {
-    background-color: lightgrey;
-  }
+  background-color: rgb(179, 199, 243);
+}
+
+h1 {
+  color: black;
+  font-family: Verdana;
+  margin: 50px;
   
-  h1 {
-    color: black;
-    font-family: Verdana;
-    margin: 50px;
-  }
+}
 
-  p {
-    color: black;
-    font-family: verdana;
-    font-size: small;
-  }
-
-  table, th, td {
-    border: 1px solid black;
-    font-size: medium;
-  }
-
-  table {
-    border-collapse: collapse;
-    width: 50%;
-  }
+h2 {
+  color: black;
+  font-family: Verdana;
+  margin: 10px;
   
-  th {
-    height: 30px;
-  }
+}
 
-  .button {
-    background-color: white; /* Green */
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-  }
+h3 {
+  color: black;
+  font-family: Verdana;
+  margin: 10px;
+}
+
+p {
+  color: black;
+  font-family: verdana;
+  font-size: small;
+  margin: 10px;
+}
+
+.button {
+  background-color: white; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 385px;
+}

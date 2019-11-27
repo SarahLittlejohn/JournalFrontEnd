@@ -1,31 +1,48 @@
-const resourceDisplay = document.querySelectorAll();
+const app = document.getElementById('root')
 
-// Make http request for resources from database
-let resources = new XMLHttpRequest();
-resources.open('GET', 'http://localhost:5432', true);
 
-//resources.responseType = 'text';
+const container = document.createElement('div')
+container.setAttribute('class', 'container')
+app.appendChild(container)
 
-// Functions e.g. remove, create,... that work when data is loaded
-resources.onload = function() {
+// Create a request variable and assign a new XMLHttpRequest object to it.
+var request = new XMLHttpRequest()
 
-    var data = JSON.parse(resources.response);
+// Open a new connection, using the GET request on the URL endpoint
+request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
 
-    // Function to display resources
-    //displayResources(data);
+request.onload = function() {
+  // Begin looking at JSON data here
 
-    // Function to create a resource
-    createResourceButton();
+  // Begin accessing JSON data here
+  var data = JSON.parse(this.response)
 
-    // Function to delete a resource
-    deleteResourceButton();
+  if (request.status >= 200 && request.status < 400) {
+    data.forEach(movie => {
+      const card = document.createElement('div')
+      card.setAttribute('class', 'card')
 
-    // Function to update a resource
-    updateResourceButton();
+      const h2 = document.createElement('h2')
+      h2.textContent = movie.title
 
+      const h3 = document.createElement('h3')
+      h3.textContent = movie.producer
+
+      const p = document.createElement('p')
+      movie.description = movie.description.substring(0, 300)
+      p.textContent = `${movie.description}...`
+
+      container.appendChild(card)
+      card.appendChild(h2)
+      card.appendChild(h3)
+      card.appendChild(p)
+  })} else {
+    console.log('error')
+  }
 }
 
-resources.send();
+// Send request
+request.send()
 
 // Functions are defined here
 // Display resources
