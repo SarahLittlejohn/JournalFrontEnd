@@ -1,10 +1,31 @@
+* {
+  box-sizing: border-box
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Dosis', sans-serif;
+  line-height: 1.6;
+  color: #666;
+  background: #F6F6F6;
+}
+
 #root {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.wrapper {
-  text-align: center;
+
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+}
+
+p {
+  padding: 0 2.5rem 2.5rem;
+  margin: 0;
 }
 
 .container {
@@ -14,49 +35,68 @@
 
 .card {
   margin: 1rem;
-  border: 1px solid rgb(14, 14, 41);
-  border-radius: 10px;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all .2s linear;
 }
 
-body {
-  background-color: rgb(179, 199, 243);
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+}
+
+.wrapper {
+  text-align: center;
 }
 
 h1 {
-  color: black;
-  font-family: Verdana;
-  margin: 50px;
-  
+  text-align: center;
+  padding: 1.5rem 2.5rem;
+  background-image: linear-gradient(120deg, #9d50c9 0%, #96b6ec 100%);
+  margin: 0 0 2rem 0;
+  font-size: 2.5rem;
+  color: white;
 }
 
 h2 {
-  color: black;
-  font-family: Verdana;
-  margin: 10px;
+
+  padding: 1.5rem 2.5rem;
+  background-image: linear-gradient(120deg, #9d50c9 0%, #96b6ec 100%);
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  color: white;
   
 }
 
 h3 {
+
+  padding: 1.5rem 2.5rem;
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
   color: black;
-  font-family: Verdana;
-  margin: 10px;
 }
 
-p {
-  color: black;
-  font-family: verdana;
-  font-size: small;
-  margin: 10px;
-}
 
 .button {
-  background-color: white; /* Green */
+
+  background-color: white;
   border: none;
   color: black;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1.5rem;
   border-radius: 10px;
   width: 385px;
+  font-family: 'dosis', sans-serif;
+  font-weight: bold;
+}
+
+.button:hover {
+
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
 }

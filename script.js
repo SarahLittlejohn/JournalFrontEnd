@@ -1,8 +1,10 @@
+// Access 'root' div inside index.html
 const app = document.getElementById('root')
 
-
+// Create a div and set the class to be 'container'
 const container = document.createElement('div')
 container.setAttribute('class', 'container')
+// Append the container div to the app root
 app.appendChild(container)
 
 // Create a request variable and assign a new XMLHttpRequest object to it.
@@ -17,21 +19,26 @@ request.onload = function() {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
 
+  // If statement checks for errors
   if (request.status >= 200 && request.status < 400) {
+    // For each resource, create a card
     data.forEach(movie => {
       const card = document.createElement('div')
       card.setAttribute('class', 'card')
 
+      // Make the name the heading of each card
       const h2 = document.createElement('h2')
       h2.textContent = movie.title
 
+      // Make the url the secondary heading of each card
       const h3 = document.createElement('h3')
       h3.textContent = movie.producer
 
+      // Make the description the paragraph of each card
       const p = document.createElement('p')
-      movie.description = movie.description.substring(0, 300)
-      p.textContent = `${movie.description}...`
+      p.textContent = movie.description
 
+      // Add all information to the card
       container.appendChild(card)
       card.appendChild(h2)
       card.appendChild(h3)
@@ -51,7 +58,6 @@ function displayResources(data) {
     document.getElementById("demo").innerHTML = resources.response;
 }
 
-
 // Create resource button
 function createResourceButton() {
     document.getElementById("demo").innerHTML = "Test create button";
@@ -59,7 +65,6 @@ function createResourceButton() {
 
 // Function for creating resource (via button)
 function createResource(){
-
 }
 
 // Delete resource button
