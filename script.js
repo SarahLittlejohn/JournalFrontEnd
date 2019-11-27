@@ -1,6 +1,8 @@
+const resourceDisplay = document.querySelectorAll();
+
 // Make http request for resources from database
 let resources = new XMLHttpRequest();
-resources.open('GET', "http://localhost:5432/journal", false);
+resources.open('GET', 'http://localhost:8094/resources', false);
 resources.send();
 resources.responseType = 'text';
 
@@ -15,8 +17,11 @@ resources.onload = function() {
     // Function to create a resource
     createResourceButton();
 
-    // FUnction to delete a resource
+    // Function to delete a resource
     deleteResourceButton();
+
+    // Function to update a resource
+    updateResourceButton();
 
 }
 
@@ -24,16 +29,20 @@ resources.onload = function() {
 // Display resources
 function displayResources(data) {
 
+  
+// Display data in the form of a table
+
 }
+
 
 // Create resource button
 function createResourceButton() {
-    buttonId.addEventListener('click', createResource());
-  }
+    document.getElementById("demo").innerHTML = "Hello world";
+}
 
 // Function for creating resource (via button)
 function createResource(){
-    
+
 }
 
 // Delete resource button
@@ -42,7 +51,17 @@ function deleteResourceButton(buttonId, elementToRemoveId) {
   }
 
   // Function for removing an element (via button)
-function deleteResource(elementId){
+function deleteResource(elementId) {
     var element = document.getElementById(elementId);
     element.parentNode.removeChild(element);
+  }
+
+  // Update resource button
+  function updateResourceButton(buttonId, elementToUpdateId) {
+    buttonId.addEventListener('click', updateResource(elementToUpdateId));
+  }
+
+  // Function for updating an element (via button)
+  function updateResource(elementToUpdateId) {
+
   }
